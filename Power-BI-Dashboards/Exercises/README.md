@@ -1,86 +1,81 @@
-# Power BI Practice Log & Insights 📊
+# Power BI & DAX Course Exercises 📊
 
-This log contains detailed summaries of the exercises, techniques, and key analytical findings from my completion of the **Introduction to Power BI** course. 
-
----
-
-## 📂 Chapter 1: Getting Started with Power BI
-
-### 1. Data Modeling & Slicer Interactions (`Columns in Power BI.pbix`)
-*   **Business Context:** Worldwide Importers (WWI) sells dry and chilled goods (requiring specialized packaging). The objective was to analyze sales volumes and understand salesperson performance.
-*   **Techniques Applied:**
-    *   **Data Modeling:** Established a relationship between `FactSales[Invoice Date Key]` and `DimDate[Date]`.
-    *   **Relationship Mapping:** Connected `FactSales[Salesperson Key]` to `DimEmployee[Employee Key]`.
-    *   **Interactive Slicers:** Added an Employee slicer and formatted it as a dropdown visual.
-*   **Key Insights:**
-    *   **Chilled vs. Dry Sales Trend:** Uncovered that WWI **only started selling chilled items in 2016**; prior to 2016, sales consisted entirely of dry goods.
-    *   **Salesperson Performance:** Sliced performance for salesperson **Taj Shand** to isolate specific sales patterns in the year 2014.
-
-### 2. Transaction Detail Tables (`Tables in Power BI.pbix`)
-*   **Business Context:** Creating detailed transactional views that dynamically react to page filters for granular sales auditing.
-*   **Techniques Applied:** Added a details table with conditional formatting, synced with date and customer slicers.
-*   **Key Insights:**
-    *   **Auditing Specific Metrics:** Verified that salesperson **Sophia Hinton** generated a total sales volume (including tax) of **`$309,004.06`** in 2016.
+This folder houses the hands-on exercises, dashboard files (`.pbix`), and key insights from my completed Power BI learning path.
 
 ---
 
-## 📂 Chapter 2: Transforming Data (Power Query Editor)
+## 🎓 Completed Courses
 
-### 1. Data Cleaning & Transformation Before Load
-*   **Techniques Applied:**
-    *   Removed irrelevant leading rows and promoted the correct row to headers.
-    *   Built and tracked a **6-step data transformation pipeline** inside Power Query Editor.
-
-### 2. Customer Aggregation & Clustered Visuals
-*   **Business Context:** Finding buying groups and analyzing transaction minimums.
-*   **Techniques Applied:**
-    *   Ingested and cleaned `DimCustomer`.
-    *   Created a clustered column chart plotting buying groups (`DimCustomer`) against `Total Including Tax` (`FactSale`).
-    *   Changed the default aggregation of the numerical field to **Minimum** to analyze baseline ticket values.
-*   **Key Insights:**
-    *   Identified that the cheapest transaction made by the **Tailspin Toys** buying group was **`$5.52`**.
-
-### 3. Column Data Anomalies & Type Corrections
-*   **Techniques Applied:**
-    *   Cleaned anomalies (such as replacing `?` and `-` symbols) in the `Credit Limit` column inside Power Query.
-    *   Converted columns to **Currency** data types in Table View for `Profit` and `Total Including Tax` to ensure correct monetary formatting (averaging **`$865.82`** in total sales per ticket).
-
-### 4. Geographic Data & Map Visualizations
-*   **Business Context:** Identifying state-level profitability where standard bar charts become too cluttered.
-*   **Techniques Applied:**
-    *   Loaded `DimCity` and mapped the `State Province` column to the geographic **State or Province** category.
-    *   Rendered a map visualization tracking average profit.
-*   **Key Insights:**
-    *   Identified that **Washington** generated the highest average profit for customer **Wing Tip Toys** at **`$465.47`**.
+### 📘 Course 1: Introduction to Power BI (Completed ✅)
+*   **Overview:** Foundational skills for importing, transforming, modeling, and visualizing data inside Power BI Desktop.
+*   **Chapters & Completed Work:**
+    *   **Chapter 1: Getting Started with Power BI**
+        *   `Columns in Power BI.pbix` - Analyzed sales volumes for Worldwide Importers and discovered chilled products sales began in **2016**.
+        *   `Tables in Power BI.pbix` - Formatted tables and matrices with conditional formatting. Verified **Sophia Hinton** generated **`$309,004.06`** in 2016.
+    *   **Chapter 2: Transforming Data**
+        *   Utilized **Power Query Editor** to clean, shape, reshape, change data types, and manage null values in raw data. Cleaned data anomalies (`?` and `-` symbols) in `Credit Limit` column. Found cheapest transaction for **Tailspin Toys** was **`$5.52`**.
+    *   **Chapter 3: Visualizing Data**
+        *   Built standard visualizations (bar charts, line charts, cards, treemaps) and applied dashboard design best practices. Verified total forecasted sales of **`$18.13bn`** and Cell Phones budget of **`$1,208,041,332.59`**.
+    *   **Chapter 4: Filtering & Interactions**
+        *   Configured visual-level, page-level, and report-level filters and managed visual cross-filtering behaviors (card budget value resolved to **`$17.17bn`**). Visualized Top 5 stores: **Contoso North America Reseller** ranked 5th.
 
 ---
 
-## 📂 Chapter 3: Visualizing Data
+### 📘 Course 2: Introduction to DAX (Completed ✅)
+*   **Overview:** Mastering Data Analysis Expressions (DAX) to build custom calculations, measures, and data models in Power BI.
+*   **Key Concepts & Skills Learned:**
 
-### 1. Visual Selection & Hierarchical Treemaps
-*   **Techniques Applied:**
-    *   Converted a standard Donut Chart into a **Treemap** to display product category proportions more clearly.
-    *   Converted standard Cards to a **Multi-row Card** to compare forecasted vs. budgeted sales values.
-*   **Key Insights:**
-    *   Determined that the **Total Forecasted Sales Amount** across the dataset is **`$18.13bn`**.
+#### 1. Calculated Columns vs. Measures
+*   **Business Context:** Adventure Works Cycles wanted to understand their yearly profitability and order trends.
+*   **Profit Column (Calculated Column):** Created a column to calculate gross profit per transaction:
+    ```dax
+    Profit = Sales[Line Price] - Sales[Line Cost]
+    ```
+    *Insight:* Verified that Adventure Works gained **`$4.44Bn`** in total profits for the year 2019.
+*   **Sales Count (Measure):** Implemented a transaction counter to identify order velocity:
+    ```dax
+    Sales Count = COUNT(Sales[SalesOrderNumber])
+    ```
+    *Insight:* Found that **May 2020** represented the highest single sales velocity period.
+*   **Profit Margin Ratio (Measure):** Created a core metric comparing profit against revenue using safe division:
+    ```dax
+    Profit Margin Ratio = DIVIDE([Total Profit], [Total Sales])
+    ```
+    *Insight:* Identified **2019** as the year with the highest profit margin percentage.
 
-### 2. Grid Structuring & Summary Matrices
-*   **Techniques Applied:** Converted a detailed Table visual into a summarized **Matrix** to improve readability.
-*   **Key Insights:**
-    *   Summarized the budget amount for the **Cell Phones** category to be exactly **`$1,208,041,332.59`**.
+#### 2. Evaluation Context & Iterators
+*   **Row Context:** Iterating calculations row-by-row (implicit in calculated columns; explicit in iterators).
+*   **Filter Context:** Evaluating aggregates based on active filters (slicers, visual placement, or pane selection).
+*   **Iterator Functions (`SUMX`, `AVERAGEX`):** Used to perform row-by-row computations over a table before aggregating:
+    *   Designed `AvgProfit` using `AVERAGE()` and compared it to `AvgProfit_X` using `AVERAGEX(Sales, Sales[Profit])` via a clustered column chart to confirm matching distribution behaviors.
 
----
+#### 3. Advanced Context Modification (`CALCULATE` & Variables)
+*   **Variables (`VAR` / `RETURN`):** Implemented variables to compute inflation adjustments cleanly without hardcoding values multiple times:
+    ```dax
+    TotalSales_w_increase = 
+    VAR increase = 0.05
+    RETURN '_Calculations'[TotalSales] + ('_Calculations'[TotalSales] * increase)
+    ```
+    *Insight:* Projected adjusted sales of **`$31M`** (a 5% increase over the baseline **`$29M`**).
+*   **Filter Overriding (`CALCULATE`):** Used `CALCULATE` to evaluate transactions under specific dimensions:
+    ```dax
+    2018_Bike_revenue = 
+    CALCULATE(
+        SUM(Sales[Line Price]),
+        Sales[Product Category] = "Bikes",
+        YEAR(Sales[OrderDate]) = 2018
+    )
+    ```
+    *Insight:* Analyzed category performance where Bikes accounted for a specific **`3%`** proportion.
 
-## 📂 Chapter 4: Filtering & Interactions
-
-### 1. Turning Off Cross-Filtering Interactions
-*   **Business Context:** Ensuring high-level KPI cards (Actual, Forecast, Budget) remain static to show overall totals, even when a user filters other charts on the page.
-*   **Techniques Applied:** Used **Edit Interactions** to disable cross-filtering on the KPI cards.
-*   **Key Insights:**
-    *   When cross-filtering is disabled, the Budget card maintains its static overall total of **`$17.17bn`** regardless of other visual selections.
-
-### 2. Top-N Advanced Filtering
-*   **Business Context:** Isolating the top-performing sales locations out of hundreds of entries.
-*   **Techniques Applied:** Created a clustered bar chart and applied a visual-level **Top 5** filter sorted by sales amount.
-*   **Key Insights:**
-    *   Identified the top 5 stores. **Contoso North America Reseller** ranked as the **5th best performing store** overall.
+#### 4. Time Intelligence & Calendar Dimensions
+*   **Date Tables (`CALENDAR` / `CALENDARAUTO`):** Created dedicated date tables to support time intelligence functions (such as `LASTDATE` and `DATESBETWEEN`):
+    ```dax
+    DateTable = CALENDARAUTO(12)
+    ```
+*   **Logistics Lag (`DATEDIFF`):** Calculated delivery duration timelines from order placement to customer receipt:
+    ```dax
+    Delivery_Lag = DATEDIFF(Sales[OrderDate], Sales[DeliveryDate], DAY)
+    ```
+    *Insight:* Uncovered an average delivery shipping lag of **`7.47 days`**.
+*   **Quick Measures:** Constructed Quarter-over-Quarter percentage change metrics for `TotalSales` over consecutive periods.
