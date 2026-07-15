@@ -1,5 +1,11 @@
 [
   {
+    "date": "July 15, 2026",
+    "title": "Completed Introduction to DAX Course",
+    "category": "Skills",
+    "description": "Completed the Introduction to DAX coourse in Power BI. Mastered variables, CALCULATE filters, interator functions (SUMX,AVERAGEX), time intelligence calendar tables, and DATEDIFF metrics."
+  },
+  {
     "date": "July 14, 2026",
     "title": "Completed Introduction to Power BI Course",
     "category": "Skills",
