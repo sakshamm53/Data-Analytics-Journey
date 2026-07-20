@@ -35,9 +35,40 @@ This folder houses the hands-on exercises, dashboard files (`.pbix`), and key in
 ---
 
 ### 📘 Course 3: Data Visualisation in Power BI (In Progress 🔄)
-*   **Overview:** Advanced visual storytelling, layout design, user-centric report structuring, and custom charting in Power BI.
-*   **Progress:**
-    *   **Chapter 1:** *[Notes & Exercises to be added]*
-    *   **Chapter 2:** *[Notes & Exercises to be added]*
-    *   **Chapter 3:** *[Upcoming]*
-    *   **Chapter 4:** *[Upcoming]*
+*   **Overview:** Advanced visual storytelling, executive report structuring, cognitive load optimization, and custom charting in Power BI Desktop for *Threads Ltd.*
+*   **Core Concepts:**
+    *   **Less is More:** Reducing visual clutter, cognitive load, and applying chunking and negative space.
+    *   **Dashboards vs. Paginated Reports:** Distinguishing single-pane-of-glass real-time operational views from pixel-perfect, multi-page printable reports.
+
+#### 📂 Chapter 1: The Audience is King (Audience-Driven Design)
+*   **Target Stakeholder:** Head of Sales at Threads Ltd.
+*   **Exercise 1: Granular Order Detail Table & Slicers**
+    *   *Visuals:* Data table (`Product SKU`, `Order ID`, `Order Quantity`, `Sales Amount`) paired with Year and Product Name dropdown slicers.
+    *   *Key Insight:* Identified that Order ID **`6160`** generated the highest sales amount for **Aero Daily Fitness Tee** at **`€1,200,000`**.
+*   **Exercise 2: Sales vs. COGS Scatter Plot**
+    *   *Business Context:* Investigating the relationship between Sales Revenue and Cost of Goods Sold (COGS) to track gross profit trends over time.
+    *   *Key Insight:* Discovered that the peak single-day sales volume during 2020–2021 occurred on **Friday, March 26, 2021** reaching **`€19,218`**.
+*   **Exercise 3: Multi-Dimensional Bubble Chart**
+    *   *Business Context:* Evaluating product price vs. sales amount vs. order volume to inform catalog expansion for "Tank Tops".
+    *   *Setup:* X-axis = `SUM(Sales Amount)`, Y-axis = `Average Product Price`, Size = `SUM(Order Quantity)`.
+    *   *Key Insight:* For the product with the highest average price (**`€21.5`**), total order quantity reached **`262`** units.
+
+#### 📂 Chapter 2: Getting An Emotional Response (Formatting & Visual Hierarchy)
+*   **Target Stakeholder:** Product Manager at Threads Ltd.
+*   **Exercise 1: Channel-Filtered Clustered Bar Chart**
+    *   *Setup:* Product Sales Amount by Product Name, filtered to `Product Gender = Women`, `Year = 2021`, `Channel = Supermarket`.
+    *   *Key Insight:* **Hera Pullover Hoodie** generated the highest total sales volume for women's products in supermarkets at **`€11k`**.
+*   **Exercise 2: Analytics Pane Constant Lines (`Product Comparison`)**
+    *   *Technique:* Applied an **Ideal Sales Amount** constant reference line to benchmark catalog items visually.
+    *   *Key Insight:* **Troy Yoga Short** fell just below the target ideal sales threshold line.
+*   **Exercise 3: Stacking Variables across Distribution Channels**
+    *   *Visual:* Stacked Bar Chart tracking total order quantities by channel and product categories.
+    *   *Key Insight:* The **Franchise** channel processed the largest volume of orders overall.
+*   **Exercise 4: Small Multiples for Multi-Dimensional Comparisons**
+    *   *Technique:* Used Small Multiples to compare Hoodies & Sweatshirts sales by color and clothing gender for Franchise outlets without creating multiple separate charts.
+    *   *Key Insight:* Identified **Blue, Men** as the top-performing gender and color combination for Franchise orders in 2021.
+
+---
+
+### 📂 Chapter 3 & 4 (Upcoming ⏳)
+*   *Notes & exercises to be added upon completion.*
