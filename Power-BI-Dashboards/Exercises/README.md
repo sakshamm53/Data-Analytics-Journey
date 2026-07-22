@@ -34,10 +34,10 @@ This folder houses the hands-on exercises, dashboard files (`.pbix`), and key in
 
 ---
 
-### 📘 Course 3: Data Visualisation in Power BI (In Progress 🔄)
+### 📘 Course 3: Data Visualisation in Power BI (Completed ✅)
 *   **Overview:** Advanced visual storytelling, executive report structuring, cognitive load optimization, and custom charting in Power BI Desktop for *Threads Ltd.*
 *   **Core Concepts:**
-    *   **Less is More:** Reducing visual clutter, cognitive load, and applying chunking and negative space.
+    *   **Less is More & Cognitive Load:** Reducing visual clutter, balancing information-rich visuals with negative space, and using color as a pre-attentive emphasis attribute.
     *   **Dashboards vs. Paginated Reports:** Distinguishing single-pane-of-glass real-time operational views from pixel-perfect, multi-page printable reports.
 
 #### 📂 Chapter 1: The Audience is King (Audience-Driven Design)
@@ -68,7 +68,23 @@ This folder houses the hands-on exercises, dashboard files (`.pbix`), and key in
     *   *Technique:* Used Small Multiples to compare Hoodies & Sweatshirts sales by color and clothing gender for Franchise outlets without creating multiple separate charts.
     *   *Key Insight:* Identified **Blue, Men** as the top-performing gender and color combination for Franchise orders in 2021.
 
----
+#### 📂 Chapter 3: Reducing Cognitive Load (Executive Reporting)
+*   **Target Stakeholder:** Chief Commercial Officer (CCO) at Threads Ltd.
+*   **Exercise 1: Financial Trend Line & Area Charts**
+    *   *Business Context:* Tracking Revenue, COGS, and Gross Profit over time.
+    *   *Key Insight:* Peak gross profit over the 4-year period occurred in **March 2018** reaching **`€107,691.49`**.
+*   **Exercise 2: Rate vs. Count Combination Charts (Combo Charts)**
+    *   *Technique:* Comparing counting variables (Gross Profit) against rate variables (Gross Profit Margin %) on a dual-axis visual.
+    *   *Key Insight:* In **March 2019**, the average profit margin for Tank Tops reached its peak at **`58.94%`**.
 
-### 📂 Chapter 3 & 4 (Upcoming ⏳)
-*   *Notes & exercises to be added upon completion.*
+#### 📂 Chapter 4: Less is More (Target Tracking & Executive Design)
+*   **Target Stakeholder:** Executive Leadership & CCO at Threads Ltd.
+*   **Exercise 1: Shares of the Whole (Pie Chart vs. Treemap)**
+    *   *Technique:* Compared static pie charts vs. hierarchical treemaps for order quantities across retail channels.
+    *   *Key Insight:* Medium (**'M'**) sized products ordered from **Small Chain Stores** reached **`352`** units.
+*   **Exercise 2: Gauges & Custom KPI Card Thresholds**
+    *   *Technique:* Configured a Gauge visual with a company target profit margin of **70%** (`0.70`), and created measures `Orders Above Target Profit Margin` and `Orders Below Target Profit Margin`.
+    *   *Key Insight:* Comparing "Tees" sales in 2020 vs. 2021, **2020** recorded a higher number of orders exceeding the target profit margin.
+*   **Exercise 3: Executive Key Performance Indicators (KPI Visuals)**
+    *   *Business Context:* Monitoring total orders and order return variance against organizational benchmarks.
+    *   *Key Insight:* Total order fulfillment volume underperformed against the executive target by **`-21.67%`**.

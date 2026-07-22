@@ -8,7 +8,7 @@ My background is in **Computer Science** (B.Sc., CGPA 9.56/10) combined with pos
 
 ## 🛠️ Tech Stack & Key Skills
 *   **Languages:** SQL, Python (Pandas, NumPy, Scikit-Learn, Matplotlib, Seaborn), R, C
-*   **Business Intelligence:** Power BI (DAX, Power Query Editor), Tableau, Excel (Pivot Tables, Advanced Formulas, Financial Modeling)
+*   **Business Intelligence:** Power BI (DAX, Power Query Editor, Executive Visual Design, KPI Tracking), Tableau, Excel (Pivot Tables, Advanced Formulas, Financial Modeling)
 *   **Methodologies:** Star & Snowflake Schemas, Data Modeling, Feature Engineering, Predictive Modeling (Regression, Random Forests, CNNs), Funnel Analysis, Agile/Scrum (Trello, Jira)
 *   **Certifications:** SAS Certified Professional, Google Analytics, HubSpot Inbound Sales
 
@@ -24,7 +24,7 @@ Data-Analytics-Journey/
 ├── 📄 daily_log.json          # Unified progress log (all tools and milestones)
 │
 ├── 📂 Power-BI-Dashboards/     # Power BI section
-│   ├── 📂 Exercises/          # Hands-on exercises, DAX formulas, and practice files (.pbix)
+│   ├── 📂 Exercises/          # Hands-on exercises, DAX formulas, and visual reports (.pbix)
 │   └── 📂 Project-Dashboards/  # End-to-end dashboard designs and screenshots (.png)
 │
 ├── 📂 SQL-Queries/             # SQL section
@@ -44,9 +44,12 @@ I use a custom Python tracker (`log_progress.py`) to log my daily upskilling mil
 ### Recent Activities
 *(Below is a highlight of recent concepts mastered. Open `daily_log.json` to view the full history.)*
 
-*   **Power BI & DAX:** Completed both *Introduction to Power BI* (data transformation, modeling, and visualization) and *Introduction to DAX* (calculated columns, dynamic measures, filter context manipulation with `CALCULATE`, and iterators).
-*   **SQL:** CTEs, subqueries, and table joins.
-*   **Excel:** Advanced modeling techniques, including the Saskatchewan Farm Credit Model.
+*   **Power BI Courses Completed:**
+    *   *Introduction to Power BI:* Data cleaning (Power Query), relational modeling, and visual filters.
+    *   *Introduction to DAX:* Calculated columns, dynamic measures, filter context manipulation (`CALCULATE`), and time intelligence.
+    *   *Data Visualisation in Power BI:* Executive storytelling (CCO persona), cognitive load optimization, combo charts, Small Multiples, Gauges (70% margin threshold), and KPI tracking.
+*   **SQL:** CTEs, subqueries, and window functions.
+*   **Excel:** Advanced business modeling techniques (including Saskatchewan Farm Credit Model).
 
 ---
 
